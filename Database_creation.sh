@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS feature_submenu (
   id int NOT NULL AUTO_INCREMENT,
   link varchar(255) DEFAULT '',
   name varchar(50) DEFAULT '',
-  feature_menu_id int DEFAULT NULL,
+  feature_menu_id int DEFAULT 0,
   language varchar(4) DEFAULT '',
   status int DEFAULT '0',
   PRIMARY KEY (id)
