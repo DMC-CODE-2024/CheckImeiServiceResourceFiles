@@ -143,4 +143,8 @@ INSERT IGNORE INTO sys_param_list_value(description, display_name, interpretatio
 INSERT IGNORE INTO sys_param_list_value (description, display_name, interpretation, list_order, tag, tag_id, value) VALUES (NULL, 'Operators Name', 'SMART', 0, 'OPERATORS', 'GSM', '0');
 
 insert ignore into user(username,password,parent_id) values ('MetfoneAdmin' ,'abcd@1234' ,'1') ,('SeatelAdmin' ,'abcd@1234' ,'2') ,('CellcardAdmin' ,'abcd@1234' ,'3');
+
+insert ignore  into  eirs_response_param (tag , value ,feature_name,language ,description) values ('luhnFailMsg' ,'Invalid IMEI number. Please ensure you have entered a valid 15-digit IMEI','CheckImei' , 'en' , 'Message for luhn algo fail ');
+insert ignore  into  eirs_response_param (tag , value ,feature_name,language ,description) values ('luhnFailMsg' ,'លេខ IMEI មនតរមតរវ។ សមបរាកដថាអនកបានបញចល IMEI 15 ខទងតរមតរវ។','CheckImei' , 'km' , 'Message for luhn algo fail ');
+insert ignore into label_mul_lingual_text (label ,english_name,khmer_name ,feature_name) values ('luhnFailMsg' ,'Invalid IMEI number. Please ensure you have entered a valid 15-digit IMEI' ,'លេខ IMEI មនតរមតរវ។ សមបរាកដថាអនកបានបញចល IMEI 15 ខទងតរមតរវ។' ,'CheckImei');
 EOFMYSQL
