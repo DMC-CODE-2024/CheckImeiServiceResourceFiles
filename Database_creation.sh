@@ -147,4 +147,15 @@ insert ignore into user(username,password,parent_id) values ('MetfoneAdmin' ,'ab
 insert ignore  into  eirs_response_param (tag , value ,feature_name,language ,description) values ('luhnFailMsg' ,'Invalid IMEI number. Please ensure you have entered a valid 15-digit IMEI','CheckImei' , 'en' , 'Message for luhn algo fail ');
 insert ignore  into  eirs_response_param (tag , value ,feature_name,language ,description) values ('luhnFailMsg' ,'លេខ IMEI មនតរមតរវ។ សមបរាកដថាអនកបានបញចល IMEI 15 ខទងតរមតរវ។','CheckImei' , 'km' , 'Message for luhn algo fail ');
 insert ignore into label_mul_lingual_text (label ,english_name,khmer_name ,feature_name) values ('luhnFailMsg' ,'Invalid IMEI number. Please ensure you have entered a valid 15-digit IMEI' ,'លេខ IMEI មនតរមតរវ។ សមបរាកដថាអនកបានបញចល IMEI 15 ខទងតរមតរវ។' ,'CheckImei');
+
+update sys_param set feature_name ='Check IMEI' where feature_name ='CheckImei';
+update sys_param set description ='Feature id for Check imei feature' where tag ='CHECK_IMEI_FEATURE_ID';
+update sys_param set description ='Sms sending flag for Check imei ussd process' where tag ='send_sms_flag';
+update sys_param set description ='Flag to check ip authentication in Check imei' where tag ='CHECK_IMEI_AUTH_WITH_IP';
+update sys_param set description ='Tag for showing service down message in check imei ' where tag ='service_down_flag';
+update sys_param set description ='Rule List for showing device detail in Check imei feature' where tag ='CheckImeiDeviceDetailShowRule';
+update sys_param set description ='Url for notification feature' where tag ='notificationTableUrl'; 
+update feature_rule set feature ='Check IMEI' where feature = 'CheckImeiNew';
+update check_imei_response_param set feature_name = 'Check IMEI' where feature_name = 'CheckImei';
+
 EOFMYSQL
