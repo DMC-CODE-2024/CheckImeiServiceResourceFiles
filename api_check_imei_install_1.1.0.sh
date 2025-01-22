@@ -7,7 +7,7 @@ mkdir -p /u02/eirsdata/release/api_service/api_check_imei_module/1.1.0/
 cd /u02/eirsdata/release/api_service/api_check_imei_module/1.1.0/
 tar -xzvf api_check_imei_1.1.0.tar.gz >>api_check_imei_1.1.0_untar_log.txt
 
-mv api_check_imei_1.1.0.jar ${RELEASE_HOME}/binary/
+mv api_check_imei.jar ${RELEASE_HOME}/binary/api_check_imei_1.1.0.jar
 
 cd ${APP_HOME}/api_service/api_check_imei/
 rm api_check_imei.jar
